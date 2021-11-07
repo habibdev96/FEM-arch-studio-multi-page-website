@@ -34,6 +34,7 @@ const Container = styled.div`
     padding: 5rem;
   }
 `;
+
 const Cta = (): JSX.Element => {
   return (
     <section>
@@ -42,7 +43,6 @@ const Cta = (): JSX.Element => {
           <Image
             src={bg}
             alt='house on the water'
-            quality={100}
             layout='fill'
             objectFit='cover'
             objectPosition='center'
