@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { CardHeading } from '../styledElements/Headings.styled';
@@ -25,13 +24,13 @@ const StyledArticle = styled.article`
   }
 `;
 
-const PortfolioCard: React.FC<IPortfolioCardData> = ({
+const PortfolioCard = ({
   bg,
   title,
   date,
   isFeatured,
   featureNumber,
-}) => {
+}: IPortfolioCardData): JSX.Element => {
   return (
     <StyledArticle>
       {isFeatured && <h2 className='feature-number'>{featureNumber}</h2>}

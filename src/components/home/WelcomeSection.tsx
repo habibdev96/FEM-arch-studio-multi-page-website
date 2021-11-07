@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import {
@@ -29,7 +28,7 @@ const Container = styled.div`
   }
 `;
 
-const WelcomeSection: React.FC = () => {
+const WelcomeSection = (): JSX.Element => {
   return (
     <StyledSection>
       <BannerHeading>Welcome</BannerHeading>

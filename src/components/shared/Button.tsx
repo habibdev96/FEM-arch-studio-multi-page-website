@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
@@ -31,7 +30,7 @@ const StyledButton = styled.a`
   }
 `;
 
-const Button: React.FC<IButtonProps> = ({ text, path }) => {
+const Button = ({ text, path }: IButtonProps): JSX.Element => {
   return (
     <Link href={path} passHref>
       <StyledButton>

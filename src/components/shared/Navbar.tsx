@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -26,7 +25,7 @@ const Container = styled.div`
   }
 `;
 
-const Navbar: React.FC = () => {
+const Navbar = (): JSX.Element => {
   const { links } = useGlobalState();
 
   return (

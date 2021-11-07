@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { ICarouselData } from '../../interfaces';
@@ -32,7 +31,11 @@ const StyledArticle = styled.article`
   }
 `;
 
-const CarouselSlide: React.FC<ICarouselData> = ({ bg, title, description }) => {
+const CarouselSlide = ({
+  bg,
+  title,
+  description,
+}: ICarouselData): JSX.Element => {
   return (
     <StyledArticle>
       <div className='bg'>

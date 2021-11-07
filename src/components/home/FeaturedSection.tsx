@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { SectionHeading } from '../styledElements/Headings.styled';
 import Button from '../shared/Button';
@@ -25,7 +24,7 @@ const Container = styled.div`
   }
 `;
 
-const FeaturedSection: React.FC = () => {
+const FeaturedSection = (): JSX.Element => {
   const { portfolioCards } = useGlobalState();
 
   return (

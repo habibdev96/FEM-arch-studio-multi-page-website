@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -15,7 +14,7 @@ const Container = styled.div`
   }
 `;
 
-const HomeCarousel: React.FC = () => {
+const HomeCarousel = (): JSX.Element => {
   const { carouselSlides } = useGlobalState();
 
   const responsive = {

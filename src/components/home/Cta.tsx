@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
@@ -35,7 +34,7 @@ const Container = styled.div`
     padding: 5rem;
   }
 `;
-const Cta: React.FC = () => {
+const Cta = (): JSX.Element => {
   return (
     <section>
       <Container>
