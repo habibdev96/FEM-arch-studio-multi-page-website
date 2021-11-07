@@ -1,5 +1,5 @@
-export interface ITestData {
+export interface ILinksData {
   id: number;
-  username: string;
-  age: number;
+  text: string;
+  path: string;
 }

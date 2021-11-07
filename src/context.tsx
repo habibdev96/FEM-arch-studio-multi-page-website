@@ -1,19 +1,22 @@
 import React, { createContext, useState, useContext } from 'react';
-import { testData } from './data';
-import { ITestData } from './interfaces';
+import { linksData } from './data';
+import { ILinksData } from './interfaces';
 
 const useValue = () => {
-  const [data, setData] = useState<ITestData[]>(testData);
+  const [links, setLinks] = useState<ILinksData[]>(linksData);
 
   return {
-    data,
-    setData,
+    links,
   };
 };
 
 const GlobalStateContext = createContext({} as ReturnType<typeof useValue>);
 
-const GlobalStateProvider = ({ children }: { children: React.ReactNode }) => {
+export const GlobalStateProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   return (
     <GlobalStateContext.Provider value={useValue()}>
       {children}
@@ -21,12 +24,4 @@ const GlobalStateProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const useGlobalState = () => {
-  const context = useContext(GlobalStateContext);
-  if (!context) {
-    throw new Error('useGlobalState must be used within a GlobalStateContext');
-  }
-  return context;
-};
-
-export { GlobalStateProvider, useGlobalState };
+export const useGlobalState = () => useContext(GlobalStateContext);

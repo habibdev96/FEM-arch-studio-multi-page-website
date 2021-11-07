@@ -1,4 +1,4 @@
-export const customMediaQuery = (maxWidth: number) =>
+const customMediaQuery = (maxWidth: number) =>
   `@media (max-width: ${maxWidth}px)`;
 
 export const media = {

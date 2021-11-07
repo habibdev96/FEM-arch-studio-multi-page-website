@@ -1,10 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useGlobalState } from '../context';
 
 const Home: NextPage = () => {
-  const { data } = useGlobalState();
-
   return (
     <>
       <Head>

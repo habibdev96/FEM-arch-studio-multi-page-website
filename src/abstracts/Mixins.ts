@@ -6,6 +6,13 @@ const flexAlign = css`
   gap: var(--gap);
 `;
 
+const flexBetween = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+`;
+
 const headingStyles = css`
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -47,6 +54,7 @@ const maxWidthLg = css`
 
 export {
   flexAlign,
+  flexBetween,
   headingStyles,
   textStyles,
   sectionSpacingSm,

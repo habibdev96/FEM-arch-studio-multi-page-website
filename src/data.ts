@@ -1,14 +1,5 @@
-import { ITestData } from './interfaces';
-
-export const testData: ITestData[] = [
-  {
-    id: 1,
-    username: 'buba',
-    age: 20,
-  },
-  {
-    id: 2,
-    username: 'beeb',
-    age: 23,
-  },
+export const linksData = [
+  { id: 1, text: 'Portfolio', path: '/portfolio' },
+  { id: 2, text: 'About Us', path: '/about' },
+  { id: 3, text: 'Contact', path: '/contact' },
 ];
