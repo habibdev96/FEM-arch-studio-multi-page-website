@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import HomeCarousel from '../components/home/HomeCarousel';
+import WelcomeSection from '../components/home/WelcomeSection';
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,9 @@ const Home: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <HomeCarousel />
+      <main>
+        <WelcomeSection />
+      </main>
     </>
   );
 };

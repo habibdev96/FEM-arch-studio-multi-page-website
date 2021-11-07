@@ -13,6 +13,13 @@ const flexBetween = css`
   gap: var(--gap);
 `;
 
+const twoCol = css`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: var(--gap);
+`;
+
 const headingStyles = css`
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -55,6 +62,7 @@ const maxWidthLg = css`
 export {
   flexAlign,
   flexBetween,
+  twoCol,
   headingStyles,
   textStyles,
   sectionSpacingSm,

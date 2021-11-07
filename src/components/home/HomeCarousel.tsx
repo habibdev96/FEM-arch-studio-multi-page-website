@@ -8,7 +8,11 @@ import { useGlobalState } from '../../context';
 
 const Container = styled.div`
   ${maxWidthLg}
-  cursor: pointer;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 `;
 
 const HomeCarousel: React.FC = () => {
