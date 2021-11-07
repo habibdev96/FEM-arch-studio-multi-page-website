@@ -46,8 +46,10 @@ const CarouselSlide: React.FC<ICarouselData> = ({ bg, title, description }) => {
         />
       </div>
       <div className='info'>
-        <MainHeading>{title}</MainHeading>
-        <Paragraph light={true}>{description}</Paragraph>
+        <MainHeading style={{ userSelect: 'none' }}>{title}</MainHeading>
+        <Paragraph light={true} style={{ userSelect: 'none' }}>
+          {description}
+        </Paragraph>
         <Button path='/portfolio' text='See Our Portfolio' />
       </div>
     </StyledArticle>

@@ -9,6 +9,7 @@ const StyledButton = styled.a`
   ${flexAlign}
   display: inline-flex;
   padding: 2.5rem 4rem;
+  margin: 2rem 0;
   gap: 2rem;
   background-color: var(--veryDarkBlue);
   transition: var(--mainTransition);
