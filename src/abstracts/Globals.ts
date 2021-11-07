@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const Globals = createGlobalStyle`
   :root {
     /* colors */
+    --white: hsl(0, 0%, 100%);
     --veryDarkBlue: hsl(225, 13%, 12%);
     --darkGrey: hsl(226, 6%, 40%);
     --mediumGrey: hsl(223, 7%, 53%);
