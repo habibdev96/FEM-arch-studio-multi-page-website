@@ -15,3 +15,12 @@ export interface IButtonProps {
   text: string;
   path: string;
 }
+
+export interface IPortfolioCardData {
+  id: number;
+  bg: StaticImageData;
+  title: string;
+  date: string;
+  isFeatured: boolean;
+  featureNumber?: string;
+}

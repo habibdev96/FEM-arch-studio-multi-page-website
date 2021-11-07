@@ -3,6 +3,7 @@ import Head from 'next/head';
 import HomeCarousel from '../components/home/HomeCarousel';
 import WelcomeSection from '../components/home/WelcomeSection';
 import Cta from '../components/home/Cta';
+import FeaturedSection from '../components/home/FeaturedSection';
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <main>
         <WelcomeSection />
         <Cta />
+        <FeaturedSection />
       </main>
     </>
   );

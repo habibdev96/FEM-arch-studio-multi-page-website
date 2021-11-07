@@ -21,3 +21,9 @@ export const BannerHeading = styled.h2`
   font-size: 20rem;
   color: var(--veryLightGrey);
 `;
+
+export const CardHeading = styled.h3<{ light: boolean }>`
+  ${headingStyles}
+  font-size: 1.8rem;
+  color: ${({ light }) => (light ? 'var(--white)' : 'var(--veryDaryBlue)')};
+`;
