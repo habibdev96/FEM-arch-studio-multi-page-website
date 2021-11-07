@@ -2,42 +2,46 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import logo from '../../../public/assets/logolight.svg';
+import { flexAlign, flexBetween, maxWidthMd } from '../../abstracts/Mixins';
+import Button from './Button';
 import StyledLink from '../styledElements/Link.styled';
-import logo from '../../../public/assets/logo.svg';
-import { flexBetween, maxWidthLg, flexAlign } from '../../abstracts/Mixins';
 import { useGlobalState } from '../../context';
 
 const Container = styled.div`
+  ${maxWidthMd}
   ${flexBetween}
-  ${maxWidthLg}
-  padding: 3rem 2rem;
+  margin: 10rem auto;
+  background-color: var(--veryLightGrey);
 
   .left {
     ${flexAlign}
   }
 
   .logo {
-    width: 15rem;
-    cursor: pointer;
+    padding: 5rem;
+    background-color: var(--veryDarkBlue);
   }
 
   .links {
     ${flexAlign}
   }
+
+  .right {
+    transform: translateX(10rem);
+  }
 `;
 
-const Navbar: React.FC = () => {
+const Footer: React.FC = () => {
   const { links } = useGlobalState();
 
   return (
-    <nav>
+    <footer>
       <Container>
         <div className='left'>
-          <Link href='/'>
-            <div className='logo'>
-              <Image src={logo} alt='arch logo' />
-            </div>
-          </Link>
+          <div className='logo'>
+            <Image src={logo} alt='arch logo' />
+          </div>
           <ul className='links'>
             {links.map((link) => (
               <li key={link.id}>
@@ -48,9 +52,12 @@ const Navbar: React.FC = () => {
             ))}
           </ul>
         </div>
+        <div className='right'>
+          <Button path='/portfolio' text='See Our Portfolio' />
+        </div>
       </Container>
-    </nav>
+    </footer>
   );
 };
 
-export default Navbar;
+export default Footer;
