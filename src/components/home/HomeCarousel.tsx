@@ -23,8 +23,18 @@ const HomeCarousel = (): JSX.Element => {
       items: 1,
       slidesToSlide: 1,
     },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 30,
+      centerMode: true,
+    },
   };
-
   return (
     <header>
       <Container>
@@ -40,6 +50,7 @@ const HomeCarousel = (): JSX.Element => {
           keyBoardControl={true}
           transitionDuration={1000}
           containerClass='carousel-container'
+          itemClass='carouse-item'
           removeArrowOnDeviceType={['tablet', 'mobile']}
         >
           {carouselSlides.map((slide) => (

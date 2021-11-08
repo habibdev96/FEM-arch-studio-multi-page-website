@@ -5,7 +5,12 @@ import logo from '../../../public/assets/logolight.svg';
 import { flexAlign, flexBetween, maxWidthMd } from '../../abstracts/Mixins';
 import Button from './Button';
 import StyledLink from '../styledElements/Link.styled';
+import { media } from '../../abstracts/Responsive';
 import { useGlobalState } from '../../context';
+
+const StyledFooter = styled.footer`
+  margin: 0 2rem;
+`;
 
 const Container = styled.div`
   ${maxWidthMd}
@@ -13,8 +18,16 @@ const Container = styled.div`
   margin: 10rem auto;
   background-color: var(--veryLightGrey);
 
+  ${media.lg} {
+    flex-direction: column;
+  }
+
   .left {
     ${flexAlign}
+
+    ${media.lg} {
+      flex-direction: column;
+    }
   }
 
   .logo {
@@ -24,10 +37,18 @@ const Container = styled.div`
 
   .links {
     ${flexAlign}
+
+    ${media.sm} {
+      flex-direction: column;
+    }
   }
 
   .right {
     transform: translateX(10rem);
+
+    ${media.xxl} {
+      transform: translateX(0);
+    }
   }
 `;
 
@@ -35,11 +56,11 @@ const Footer = (): JSX.Element => {
   const { links } = useGlobalState();
 
   return (
-    <footer>
+    <StyledFooter>
       <Container>
         <div className='left'>
           <div className='logo'>
-            <Image src={logo} alt='arch logo' />
+            <Image src={logo} alt='arch logo' layout='fixed' />
           </div>
           <ul className='links'>
             {links.map((link) => (
@@ -55,7 +76,7 @@ const Footer = (): JSX.Element => {
           <Button path='/portfolio' text='See Our Portfolio' />
         </div>
       </Container>
-    </footer>
+    </StyledFooter>
   );
 };
 

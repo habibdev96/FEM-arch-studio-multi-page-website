@@ -8,6 +8,7 @@ import {
   flexBetween,
   threeCol,
 } from '../../abstracts/Mixins';
+import { media } from '../../abstracts/Responsive';
 import { useGlobalState } from '../../context';
 
 const Container = styled.div`
@@ -17,6 +18,10 @@ const Container = styled.div`
   .top {
     ${flexBetween}
     margin-bottom: 5rem;
+
+    ${media.md} {
+      flex-direction: column;
+    }
   }
 
   .featured {

@@ -15,14 +15,14 @@ const flexBetween = css`
 
 const twoCol = css`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   gap: var(--gap);
 `;
 
 const threeCol = css`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
   gap: var(--gap);
 `;

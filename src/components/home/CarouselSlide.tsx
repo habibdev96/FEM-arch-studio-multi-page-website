@@ -4,12 +4,21 @@ import { ICarouselData } from '../../interfaces';
 import { MainHeading } from '../styledElements/Headings.styled';
 import Paragraph from '../styledElements/Paragraphs.styled';
 import Button from '../shared/Button';
+import { media } from '../../abstracts/Responsive';
 
 const StyledArticle = styled.article`
   .bg {
     position: relative;
     width: 100%;
     height: 80vh;
+
+    ${media.md} {
+      height: 70vh;
+    }
+
+    ${media.sm} {
+      height: 50vh;
+    }
 
     &:after {
       content: '';
@@ -28,6 +37,24 @@ const StyledArticle = styled.article`
     top: 10%;
     left: 15%;
     padding: 5rem;
+
+    ${media.xl} {
+      width: 75%;
+      left: 5%;
+      top: 5%;
+    }
+
+    ${media.md} {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .desc,
+  .btn {
+    ${media.sm} {
+      display: none;
+    }
   }
 `;
 
@@ -39,21 +66,16 @@ const CarouselSlide = ({
   return (
     <StyledArticle>
       <div className='bg'>
-        <Image
-          src={bg}
-          alt={title}
-          quality={100}
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
-        />
+        <Image src={bg} alt={title} quality={100} layout='fill' />
       </div>
       <div className='info'>
         <MainHeading style={{ userSelect: 'none' }}>{title}</MainHeading>
-        <Paragraph light={true} style={{ userSelect: 'none' }}>
+        <Paragraph light={true} style={{ userSelect: 'none' }} className='desc'>
           {description}
         </Paragraph>
-        <Button path='/portfolio' text='See Our Portfolio' />
+        <div className='btn'>
+          <Button path='/portfolio' text='See Our Portfolio' />
+        </div>
       </div>
     </StyledArticle>
   );

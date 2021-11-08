@@ -4,6 +4,7 @@ import { maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
 import { SectionHeading } from '../styledElements/Headings.styled';
 import Button from '../shared/Button';
 import bg from '../../../public/assets/home/desktop/image-small-team.jpg';
+import { media } from '../../abstracts/Responsive';
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -32,6 +33,15 @@ const Container = styled.div`
     top: 25%;
     left: 15%;
     padding: 5rem;
+
+    ${media.lg} {
+      width: 75%;
+    }
+
+    ${media.sm} {
+      width: 100%;
+      left: 5%;
+    }
   }
 `;
 
@@ -49,9 +59,7 @@ const Cta = (): JSX.Element => {
           />
         </div>
         <div className='info'>
-          <SectionHeading light={true}>
-            Small team, <br /> big ideas
-          </SectionHeading>
+          <SectionHeading light={true}>Small team, big ideas</SectionHeading>
           <Button path='/about' text='About Us' />
         </div>
       </Container>

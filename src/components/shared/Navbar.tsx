@@ -4,6 +4,7 @@ import Link from 'next/link';
 import StyledLink from '../styledElements/Link.styled';
 import logo from '../../../public/assets/logo.svg';
 import { flexBetween, maxWidthLg, flexAlign } from '../../abstracts/Mixins';
+import { media } from '../../abstracts/Responsive';
 import { useGlobalState } from '../../context';
 
 const Container = styled.div`
@@ -22,6 +23,10 @@ const Container = styled.div`
 
   .links {
     ${flexAlign}
+
+    ${media.md} {
+      display: none;
+    }
   }
 `;
 
