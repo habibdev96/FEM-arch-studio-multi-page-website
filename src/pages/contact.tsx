@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import SectionHero from '../components/shared/SectionHero';
+import ContactDetails from '../components/contact/ContactDetails';
 import showcase from '../../public/assets/contact/desktop/image-hero.jpg';
 import { ISectionHeroProps } from '../interfaces';
 
@@ -26,6 +27,9 @@ const Contact: NextPage = () => {
         title={ContactHeroContent.title}
         description={ContactHeroContent.description}
       />
+      <main>
+        <ContactDetails />
+      </main>
     </>
   );
 };
