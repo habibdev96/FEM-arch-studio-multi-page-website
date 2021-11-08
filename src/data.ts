@@ -4,7 +4,7 @@ import carouselSlideImageThree from '../public/assets/home/desktop/image-hero-fe
 import carouselSlideImageFour from '../public/assets/home/desktop/image-hero-trinity.jpg';
 
 import portfolioCardImageOne from '../public/assets/portfolio/desktop/image-seraph.jpg';
-import portfolioCardImageTwo from '../public/assets/portfolio/desktop/image-seraph.jpg';
+import portfolioCardImageTwo from '../public/assets/portfolio/desktop/image-eebox.jpg';
 import portfolioCardImageThree from '../public/assets/portfolio/desktop/image-federal.jpg';
 import portfolioCardImageFour from '../public/assets/portfolio/desktop/image-del-sol.jpg';
 import portfolioCardImageFive from '../public/assets/portfolio/desktop/image-prototype.jpg';
@@ -59,45 +59,48 @@ export const portfolioCardData = [
     bg: portfolioCardImageOne,
     title: 'Seraph Station',
     date: 'September 2019',
-    isFeatured: false,
+    isFeatured: true,
+    featureNumber: '1',
   },
   {
     id: 2,
     bg: portfolioCardImageTwo,
     title: 'Eebox Building',
     date: 'August 2017',
-    isFeatured: false,
+    isFeatured: true,
+    featureNumber: '2',
   },
   {
     id: 3,
     bg: portfolioCardImageThree,
     title: 'Federal II Tower',
     date: 'March 2017',
-    isFeatured: false,
+    isFeatured: true,
+    featureNumber: '3',
   },
   {
     id: 4,
     bg: portfolioCardImageFour,
     title: 'Project Del Sol',
     date: 'March 2017',
-    isFeatured: true,
-    featureNumber: '1',
+    isFeatured: false,
+    featureNumber: '4',
   },
   {
     id: 5,
     bg: portfolioCardImageFive,
     title: 'Le Prototype',
     date: 'October 2015',
-    isFeatured: true,
-    featureNumber: '2',
+    isFeatured: false,
+    featureNumber: '5',
   },
   {
     id: 6,
     bg: portfolioCardImageSix,
     title: '228B Tower',
     date: 'April 2015',
-    isFeatured: true,
-    featureNumber: '3',
+    isFeatured: false,
+    featureNumber: '6',
   },
   {
     id: 7,
@@ -105,6 +108,7 @@ export const portfolioCardData = [
     title: 'Grand Edelweiss Hotel',
     date: 'December 2013',
     isFeatured: false,
+    featureNumber: '7',
   },
   {
     id: 8,
@@ -112,6 +116,7 @@ export const portfolioCardData = [
     title: 'Netcry Tower',
     date: 'August 2012',
     isFeatured: false,
+    featureNumber: '8',
   },
   {
     id: 9,
@@ -119,6 +124,7 @@ export const portfolioCardData = [
     title: 'Hypers',
     date: 'January 2012',
     isFeatured: false,
+    featureNumber: '9',
   },
   {
     id: 10,
@@ -126,6 +132,7 @@ export const portfolioCardData = [
     title: 'SXIV Tower',
     date: 'March 2011',
     isFeatured: false,
+    featureNumber: '10',
   },
   {
     id: 11,
@@ -133,6 +140,7 @@ export const portfolioCardData = [
     title: 'Trinity Bank Tower',
     date: 'September 2010',
     isFeatured: false,
+    featureNumber: '11',
   },
   {
     id: 12,
@@ -140,5 +148,6 @@ export const portfolioCardData = [
     title: 'Project Paramour',
     date: 'February 2008',
     isFeatured: false,
+    featureNumber: '12',
   },
 ];
