@@ -50,6 +50,11 @@ const StyledArticle = styled.article`
     }
   }
 
+  .heading,
+  .desc {
+    user-select: none;
+  }
+
   .desc,
   .btn {
     ${media.sm} {
@@ -69,8 +74,10 @@ const CarouselSlide = ({
         <Image src={bg} alt={title} quality={100} layout='fill' />
       </div>
       <div className='info'>
-        <MainHeading style={{ userSelect: 'none' }}>{title}</MainHeading>
-        <Paragraph light={true} style={{ userSelect: 'none' }} className='desc'>
+        <MainHeading light={true} className='heading'>
+          {title}
+        </MainHeading>
+        <Paragraph light={true} className='desc'>
           {description}
         </Paragraph>
         <div className='btn'>

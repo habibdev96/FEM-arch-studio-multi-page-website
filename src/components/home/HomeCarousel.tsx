@@ -35,6 +35,7 @@ const HomeCarousel = (): JSX.Element => {
       centerMode: true,
     },
   };
+
   return (
     <header>
       <Container>
@@ -51,7 +52,6 @@ const HomeCarousel = (): JSX.Element => {
           transitionDuration={1000}
           containerClass='carousel-container'
           itemClass='carouse-item'
-          removeArrowOnDeviceType={['tablet', 'mobile']}
         >
           {carouselSlides.map((slide) => (
             <CarouselSlide key={slide.id} {...slide} />

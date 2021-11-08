@@ -24,3 +24,10 @@ export interface IPortfolioCardData {
   isFeatured: boolean;
   featureNumber?: string;
 }
+
+export interface ISectionHeroProps {
+  showcase: StaticImageData;
+  heading: string;
+  title: string;
+  description: string;
+}

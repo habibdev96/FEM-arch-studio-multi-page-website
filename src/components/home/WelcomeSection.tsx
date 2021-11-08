@@ -7,9 +7,20 @@ import {
 import Paragraph from '../styledElements/Paragraphs.styled';
 import { twoCol, maxWidthLg, sectionSpacingMd } from '../../abstracts/Mixins';
 import img from '../../../public/assets/home/desktop/image-welcome.jpg';
+import { media } from '../../abstracts/Responsive';
 
 const StyledSection = styled.section`
   position: relative;
+
+  .banner {
+    position: absolute;
+    z-index: 5;
+    top: -12%;
+
+    ${media.md} {
+      top: -2%;
+    }
+  }
 `;
 
 const Container = styled.div`
@@ -31,7 +42,9 @@ const Container = styled.div`
 const WelcomeSection = (): JSX.Element => {
   return (
     <StyledSection>
-      <BannerHeading>Welcome</BannerHeading>
+      <div className='banner'>
+        <BannerHeading>Welcome</BannerHeading>
+      </div>
       <Container>
         <div className='info'>
           <SectionHeading light={false}>Welcome to Arch Studio</SectionHeading>
