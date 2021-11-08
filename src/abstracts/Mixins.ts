@@ -6,6 +6,13 @@ const flexAlign = css`
   gap: var(--gap);
 `;
 
+const flexCenter = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+`;
+
 const flexBetween = css`
   display: flex;
   align-items: center;
@@ -68,6 +75,7 @@ const maxWidthLg = css`
 
 export {
   flexAlign,
+  flexCenter,
   flexBetween,
   twoCol,
   threeCol,

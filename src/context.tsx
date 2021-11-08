@@ -1,6 +1,16 @@
 import React, { createContext, useState, useContext } from 'react';
-import { linksData, carouselData, portfolioCardData } from './data';
-import { ILinksData, ICarouselData, IPortfolioCardData } from './interfaces';
+import {
+  linksData,
+  carouselData,
+  portfolioCardData,
+  leadersData,
+} from './data';
+import {
+  ILinksData,
+  ICarouselData,
+  IPortfolioCardData,
+  ILeadersData,
+} from './interfaces';
 
 const useValue = () => {
   const [links, setLinks] = useState<ILinksData[]>(linksData);
@@ -8,6 +18,7 @@ const useValue = () => {
     useState<ICarouselData[]>(carouselData);
   const [portfolioCards, setPortfolioCards] =
     useState<IPortfolioCardData[]>(portfolioCardData);
+  const [leaders, setLeaders] = useState<ILeadersData[]>(leadersData);
 
   return {
     links,
@@ -16,6 +27,8 @@ const useValue = () => {
     setCarouselSlides,
     portfolioCards,
     setPortfolioCards,
+    leaders,
+    setLeaders,
   };
 };
 

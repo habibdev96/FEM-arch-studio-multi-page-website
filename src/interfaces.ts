@@ -31,3 +31,10 @@ export interface ISectionHeroProps {
   title: string;
   description: string;
 }
+
+export interface ILeadersData {
+  id: number;
+  image: StaticImageData;
+  name: string;
+  position: string;
+}

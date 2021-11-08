@@ -16,6 +16,11 @@ import portfolioCardImageTen from '../public/assets/portfolio/desktop/image-sxiv
 import portfolioCardImageEleven from '../public/assets/portfolio/desktop/image-trinity.jpg';
 import portfolioCardImageTwelve from '../public/assets/portfolio/desktop/image-paramour.jpg';
 
+import leaderImageOne from '../public/assets/about/desktop/avatar-jake.jpg';
+import leaderImageTwo from '../public/assets/about/desktop/avatar-thompson.jpg';
+import leaderImageThree from '../public/assets/about/desktop/avatar-jackson.jpg';
+import leaderImageFour from '../public/assets/about/desktop/avatar-maria.jpg';
+
 export const linksData = [
   { id: 1, text: 'Portfolio', path: '/portfolio' },
   { id: 2, text: 'About Us', path: '/about' },
@@ -149,5 +154,32 @@ export const portfolioCardData = [
     date: 'February 2008',
     isFeatured: false,
     featureNumber: '12',
+  },
+];
+
+export const leadersData = [
+  {
+    id: 1,
+    image: leaderImageOne,
+    name: 'Jack Richards',
+    position: 'Chief Architect',
+  },
+  {
+    id: 2,
+    image: leaderImageTwo,
+    name: 'Thompson Smith',
+    position: 'Head of Finance',
+  },
+  {
+    id: 3,
+    image: leaderImageThree,
+    name: 'Jackson Rourke',
+    position: 'Lead Designer',
+  },
+  {
+    id: 4,
+    image: leaderImageFour,
+    name: 'Maria Simpson',
+    position: 'Senior Architect',
   },
 ];
