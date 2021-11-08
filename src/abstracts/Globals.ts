@@ -46,7 +46,6 @@ const Globals = createGlobalStyle`
   }
 
   body {
-    overflow-x: hidden;
     font-family: 'Spartan', sans-serif;
   }
 

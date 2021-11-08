@@ -5,12 +5,20 @@ import Paragraph from '../styledElements/Paragraphs.styled';
 import StyledUnderline from '../styledElements/Underline.styled';
 import showcase from '../../../public/assets/about/desktop/image-heritage.jpg';
 import { maxWidthLg, sectionSpacingMd, twoCol } from '../../abstracts/Mixins';
+import { media } from '../../abstracts/Responsive';
 
 const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
   ${twoCol}
   align-items: flex-start;
+
+  .showcase {
+    ${media.md} {
+      display: flex;
+      justify-content: center;
+    }
+  }
 `;
 
 const HeritageSection = (): JSX.Element => {

@@ -5,15 +5,20 @@ import Paragraph from '../styledElements/Paragraphs.styled';
 import { maxWidthLg, sectionSpacingMd, twoCol } from '../../abstracts/Mixins';
 import StyledUnderline from '../styledElements/Underline.styled';
 import { ISectionHeroProps } from '../../interfaces';
+import { media } from '../../abstracts/Responsive';
 
 const StyledHeader = styled.header`
   position: relative;
 
   .banner {
     position: absolute;
-    z-index: 5;
+    z-index: 15;
     top: 10%;
     right: 20%;
+
+    ${media.md} {
+      display: none;
+    }
   }
 `;
 
@@ -25,9 +30,15 @@ const Container = styled.div`
 
   .showcase {
     transform: translateX(5rem);
+
+    ${media.md} {
+      transform: translateX(0);
+    }
   }
 
   .info {
+    position: relative;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,6 +46,13 @@ const Container = styled.div`
     padding: 5rem 0 5rem 5rem;
     background-color: var(--white);
     transform: translateX(-20rem);
+
+    ${media.md} {
+      transform: translateX(0);
+      order: -1;
+      height: 100%;
+      padding: 0;
+    }
   }
 `;
 

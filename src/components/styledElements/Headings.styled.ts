@@ -7,7 +7,7 @@ export const MainHeading = styled.h1<{ light: boolean }>`
   font-size: 8rem;
   color: ${({ light }) => (light ? 'var(--white)' : 'var(--veryDaryBlue)')};
 
-  ${media.md} {
+  ${media.lg} {
     font-size: 4.8rem;
   }
 

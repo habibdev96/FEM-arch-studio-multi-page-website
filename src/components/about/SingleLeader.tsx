@@ -7,6 +7,8 @@ import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { ILeadersData } from '../../interfaces';
 
 const StyledArticle = styled.article`
+  text-align: center;
+
   .image {
     position: relative;
     cursor: pointer;
@@ -30,7 +32,7 @@ const StyledArticle = styled.article`
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0.2rem;
+    bottom: 0;
     transition: var(--mainTransition);
   }
 
@@ -44,7 +46,7 @@ const SingleLeader = ({ image, name, position }: ILeadersData): JSX.Element => {
   return (
     <StyledArticle>
       <div className='image'>
-        <Image src={image} alt={name} />
+        <Image src={image} alt={name} layout='responsive' />
         <div className='overlay'>
           <a href='#!'>
             <FaLinkedin className='icon' />
