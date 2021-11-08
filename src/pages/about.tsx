@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import SectionHero from '../components/shared/SectionHero';
+import HeritageSection from '../components/about/HeritageSection';
 import showcase from '../../public/assets/about/desktop/image-hero.jpg';
 import { ISectionHeroProps } from '../interfaces';
 
@@ -26,6 +27,9 @@ const About: NextPage = () => {
         title={aboutHeroContent.title}
         description={aboutHeroContent.description}
       />
+      <main>
+        <HeritageSection />
+      </main>
     </>
   );
 };
