@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
+import { useForm } from 'react-hook-form';
 import {
   linksData,
   carouselData,
@@ -20,6 +21,13 @@ const useValue = () => {
     useState<IPortfolioCardData[]>(portfolioCardData);
   const [leaders, setLeaders] = useState<ILeadersData[]>(leadersData);
 
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (): void => console.log('hello world');
+
   return {
     links,
     setLinks,
@@ -29,6 +37,10 @@ const useValue = () => {
     setPortfolioCards,
     leaders,
     setLeaders,
+    handleSubmit,
+    register,
+    errors,
+    onSubmit,
   };
 };
 
