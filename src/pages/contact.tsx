@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import SectionHero from '../components/shared/SectionHero';
 import ContactDetails from '../components/contact/ContactDetails';
+import Map from '../components/contact/Map';
 import showcase from '../../public/assets/contact/desktop/image-hero.jpg';
 import { ISectionHeroProps } from '../interfaces';
 
@@ -29,6 +30,7 @@ const Contact: NextPage = () => {
       />
       <main>
         <ContactDetails />
+        <Map />
       </main>
     </>
   );

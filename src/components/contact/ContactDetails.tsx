@@ -4,17 +4,23 @@ import StyledUnderline from '../styledElements/Underline.styled';
 import {
   maxWidthLg,
   sectionSpacingMd,
-  threeCol,
   headingStyles,
   textStyles,
   flexAlign,
 } from '../../abstracts/Mixins';
 import { FaArrowRight } from 'react-icons/fa';
+import { media } from '../../abstracts/Responsive';
 
 const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
-  ${threeCol}
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+
+  ${media.md} {
+    grid-template-columns: 1fr;
+  }
 
   .contact {
     display: flex;
