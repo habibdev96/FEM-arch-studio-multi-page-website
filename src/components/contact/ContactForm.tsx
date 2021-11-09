@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 import { useGlobalState } from '../../context';
 import { textStyles, flexAlign, headingStyles } from '../../abstracts/Mixins';
+import { media } from '../../abstracts/Responsive';
 
 const StyledForm = styled.form`
   padding: 0 5rem;
+
+  ${media.sm} {
+    padding: 0 2rem;
+  }
 
   .form-control {
     position: relative;
@@ -22,6 +27,10 @@ const StyledForm = styled.form`
     resize: none;
     width: 100%;
     color: var(--mediumGrey);
+
+    ${media.md} {
+      font-size: 1.5rem;
+    }
   }
 
   .icon {
@@ -65,6 +74,10 @@ const StyledForm = styled.form`
     transition: var(--mainTransition);
     background-color: var(--veryDarkBlue);
     color: var(--white);
+
+    ${media.sm} {
+      width: 100%;
+    }
 
     &:hover,
     &:focus {
