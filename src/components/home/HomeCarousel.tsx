@@ -47,7 +47,7 @@ const HomeCarousel = (): JSX.Element => {
           keyBoardControl={true}
           transitionDuration={1000}
           containerClass='carousel-container'
-          itemClass='carouse-item'
+          itemClass='carousel-item'
         >
           {carouselSlides.map((slide) => (
             <CarouselSlide key={slide.id} {...slide} />

@@ -10,6 +10,7 @@ const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
   position: relative;
+  overflow-x: hidden;
 
   .bg {
     position: relative;
