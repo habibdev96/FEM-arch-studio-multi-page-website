@@ -7,7 +7,7 @@ import { useGlobalState } from '../../context';
 
 const Container = styled.div`
   ${maxWidthLg}
-  padding-top: 15rem;
+  padding-top: 10rem;
 `;
 
 const HomeCarousel = (): JSX.Element => {

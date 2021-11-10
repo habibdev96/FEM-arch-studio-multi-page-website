@@ -29,6 +29,8 @@ const useValue = () => {
   } = useForm();
   const onSubmit = (): void => console.log('hello world');
 
+  const handleMobileMenuClose = (): void => setIsMobileMenuOpen(false);
+
   return {
     links,
     setLinks,
@@ -44,6 +46,7 @@ const useValue = () => {
     onSubmit,
     isMobileMenuOpen,
     setIsMobileMenuOpen,
+    handleMobileMenuClose,
   };
 };
 

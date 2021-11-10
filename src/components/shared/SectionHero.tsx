@@ -9,7 +9,7 @@ import { media } from '../../abstracts/Responsive';
 
 const StyledHeader = styled.header`
   position: relative;
-  padding-top: 15rem;
+  padding-top: 10rem;
 
   .banner {
     position: absolute;

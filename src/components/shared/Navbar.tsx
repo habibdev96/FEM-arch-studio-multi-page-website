@@ -39,14 +39,14 @@ const Container = styled.div`
 `;
 
 const Navbar = (): JSX.Element => {
-  const { links } = useGlobalState();
+  const { links, handleMobileMenuClose } = useGlobalState();
 
   return (
     <StyledNav>
       <Container>
         <div className='left'>
           <Link href='/'>
-            <div className='logo'>
+            <div className='logo' onClick={handleMobileMenuClose}>
               <Image src={logo} alt='arch logo' />
             </div>
           </Link>
@@ -54,7 +54,7 @@ const Navbar = (): JSX.Element => {
             {links.map((link) => (
               <li key={link.id}>
                 <Link href={link.path} passHref>
-                  <StyledLink>{link.text}</StyledLink>
+                  <StyledLink mobile={false}>{link.text}</StyledLink>
                 </Link>
               </li>
             ))}

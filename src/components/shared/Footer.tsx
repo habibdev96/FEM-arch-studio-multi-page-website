@@ -66,7 +66,7 @@ const Footer = (): JSX.Element => {
             {links.map((link) => (
               <li key={link.id}>
                 <Link href={link.path} passHref>
-                  <StyledLink>{link.text}</StyledLink>
+                  <StyledLink mobile={false}>{link.text}</StyledLink>
                 </Link>
               </li>
             ))}

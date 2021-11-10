@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { headingStyles } from '../../abstracts/Mixins';
 
-const StyledLink = styled.a`
+const StyledLink = styled.a<{ mobile: boolean }>`
   ${headingStyles}
-  font-size: 1.5rem;
+  font-size: ${({ mobile }) => (mobile ? '2.2rem' : '1.5rem')};
   cursor: pointer;
   color: var(--mediumGrey);
   transition: var(--mainTransition);
