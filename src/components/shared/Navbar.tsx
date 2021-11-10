@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
 import StyledLink from '../styledElements/Link.styled';
+import MobileMenuToggler from './MobileMenuToggler';
 import logo from '../../../public/assets/logo.svg';
 import { flexBetween, maxWidthLg, flexAlign } from '../../abstracts/Mixins';
 import { media } from '../../abstracts/Responsive';
@@ -17,7 +18,7 @@ const StyledNav = styled.nav`
 const Container = styled.div`
   ${flexBetween}
   ${maxWidthLg}
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
 
   .left {
     ${flexAlign}
@@ -59,6 +60,7 @@ const Navbar = (): JSX.Element => {
             ))}
           </ul>
         </div>
+        <MobileMenuToggler />
       </Container>
     </StyledNav>
   );

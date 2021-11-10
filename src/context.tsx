@@ -20,6 +20,7 @@ const useValue = () => {
   const [portfolioCards, setPortfolioCards] =
     useState<IPortfolioCardData[]>(portfolioCardData);
   const [leaders, setLeaders] = useState<ILeadersData[]>(leadersData);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   const {
     handleSubmit,
@@ -41,6 +42,8 @@ const useValue = () => {
     register,
     errors,
     onSubmit,
+    isMobileMenuOpen,
+    setIsMobileMenuOpen,
   };
 };
 
