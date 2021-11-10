@@ -7,6 +7,7 @@ const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
   ${threeCol}
+  padding-top: 15rem;
 `;
 
 const PortfolioCards = (): JSX.Element => {

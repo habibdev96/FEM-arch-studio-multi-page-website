@@ -7,6 +7,13 @@ import { flexBetween, maxWidthLg, flexAlign } from '../../abstracts/Mixins';
 import { media } from '../../abstracts/Responsive';
 import { useGlobalState } from '../../context';
 
+const StyledNav = styled.nav`
+  position: fixed;
+  width: 100%;
+  z-index: 3000;
+  background-color: var(--white);
+`;
+
 const Container = styled.div`
   ${flexBetween}
   ${maxWidthLg}
@@ -34,7 +41,7 @@ const Navbar = (): JSX.Element => {
   const { links } = useGlobalState();
 
   return (
-    <nav>
+    <StyledNav>
       <Container>
         <div className='left'>
           <Link href='/'>
@@ -53,7 +60,7 @@ const Navbar = (): JSX.Element => {
           </ul>
         </div>
       </Container>
-    </nav>
+    </StyledNav>
   );
 };
 

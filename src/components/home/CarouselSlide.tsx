@@ -7,6 +7,12 @@ import Button from '../shared/Button';
 import { media } from '../../abstracts/Responsive';
 
 const StyledArticle = styled.article`
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
   .bg {
     position: relative;
     width: 100%;

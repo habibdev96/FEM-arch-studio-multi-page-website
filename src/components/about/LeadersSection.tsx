@@ -19,7 +19,7 @@ const Container = styled.div`
 
   .heading {
     position: sticky;
-    top: 2rem;
+    top: 15rem;
 
     ${media.sm} {
       position: static;

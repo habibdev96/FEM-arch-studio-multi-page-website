@@ -7,11 +7,7 @@ import { useGlobalState } from '../../context';
 
 const Container = styled.div`
   ${maxWidthLg}
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
-  }
+  padding-top: 15rem;
 `;
 
 const HomeCarousel = (): JSX.Element => {
